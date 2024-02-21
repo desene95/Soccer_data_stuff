@@ -1,0 +1,16 @@
+services:
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - target: /Users/damianesene/soccer_db
+        type: volume
+    environment:
+      MYSQL_ROOT_PASSWORD: my_root_pwd
+      MYSQL_DATABASE: soccer-stuff-db
+      MYSQL_USER: dame
+      MYSQL_PASSWORD: S0ccer123!
+volumes:
+  mydb:
+    external: false
