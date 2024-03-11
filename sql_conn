@@ -1,0 +1,10 @@
+# Install mysql client in python
+pip install mysqlclient
+
+# connect to database
+db_connection_str = 'mysql://root:my_root_pwd@127.0.0.1:3306/soccer-stuff-db'
+
+# Create a SQLAlchemy engine
+engine = create_engine(db_connection_str)
+
+lfc_pass.to_sql('LFC_PASS', con=engine, if_exists='replace', index=False)

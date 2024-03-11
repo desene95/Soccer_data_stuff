@@ -23,6 +23,7 @@ import requests
 import re
 driver = webdriver.Chrome()
 
+team_name = input('Enter team name: ')
 url = "https://www.whoscored.com/Teams/26/Fixtures/England-Liverpool"
 
 ch_driver=driver.get(url)
